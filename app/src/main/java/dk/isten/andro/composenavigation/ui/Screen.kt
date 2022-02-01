@@ -7,4 +7,5 @@ sealed class Screen(
 ){
     object HomeScreen:Screen(route = "home_screen")
     object DetailScreen:Screen(route = "detail_screen")
+    object FurtherDetailScreen:Screen(route = "further_detail_screen")
 }

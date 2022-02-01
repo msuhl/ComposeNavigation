@@ -11,25 +11,32 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import dk.isten.andro.composenavigation.R
 
-@Preview
 @Composable
-fun DetailsScreen(){
+fun DetailsScreen(
+    navController: NavController = NavController(LocalContext.current),
+){
 
     Column(
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
-        Text("Hej Svend", fontSize = 42.sp, color = Color.Red)
+        Text("Nu bliver du bange!", fontSize = 42.sp, color = Color.Red)
         Image(painter = painterResource(R.drawable.ic_launcher_foreground), contentDescription = "", Modifier.padding(12.dp))
-        Button(onClick = { /*TODO*/ }) {
-            Text("Go back")
+        Button(onClick = {
+            navController.navigate(
+                Screen.FurtherDetailScreen.route
+            )
+        }) {
+            Text("Men vi skal længere ind")
         }
     }
 }

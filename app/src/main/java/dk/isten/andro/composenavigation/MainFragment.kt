@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.compose.ui.platform.ComposeView
 import androidx.fragment.app.Fragment
-import dk.isten.andro.composenavigation.ui.HomeScreen
+import dk.isten.andro.composenavigation.ui.Navigation
 
 class MainFragment : Fragment() {
     override fun onCreateView(
@@ -16,7 +16,7 @@ class MainFragment : Fragment() {
     ): View {
         return ComposeView(context = requireContext()).apply {
             setContent {
-                HomeScreen()
+                Navigation()
             }
         }
     }
