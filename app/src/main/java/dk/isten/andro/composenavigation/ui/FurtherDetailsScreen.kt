@@ -29,10 +29,10 @@ fun FurtherDetailsScreen(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
-        Text("Du føler asfalten mod din hud", fontSize = 42.sp, color = Color.Red)
+        Text("Level 3 - orientation not working", fontSize = 42.sp, color = Color.Red)
         Image(painter = painterResource(R.drawable.ic_launcher_foreground), contentDescription = "", Modifier.padding(12.dp))
         Button(onClick = { /*TODO*/ }) {
-            Text("Go back")
+            Text("Do nothing")
         }
     }
 }

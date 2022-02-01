@@ -29,12 +29,12 @@ fun HomeScreen(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
-        Text("Hej mor", fontSize = 42.sp, color = Color.Red)
+        Text("Level 1 - orientation working", fontSize = 42.sp, color = Color.Red)
         Image(painter = painterResource(R.drawable.lobeklub), contentDescription = "", Modifier.padding(12.dp))
         Button(onClick = {
             navController.navigate(Screen.DetailScreen.route)
         }) {
-            Text("click me")
+            Text("To level 2")
         }
     }
 }

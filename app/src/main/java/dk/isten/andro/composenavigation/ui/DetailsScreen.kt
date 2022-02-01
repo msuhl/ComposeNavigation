@@ -29,14 +29,14 @@ fun DetailsScreen(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
-        Text("Nu bliver du bange!", fontSize = 42.sp, color = Color.Red)
+        Text("Level 2 - orientation working", fontSize = 42.sp, color = Color.Red)
         Image(painter = painterResource(R.drawable.ic_launcher_foreground), contentDescription = "", Modifier.padding(12.dp))
         Button(onClick = {
             navController.navigate(
                 Screen.FurtherDetailScreen.route
             )
         }) {
-            Text("Men vi skal længere ind")
+            Text("Go to level 3")
         }
     }
 }
